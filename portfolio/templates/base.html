@@ -1,0 +1,483 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}Rubayet Hossain - Personal Portfolio{% endblock title %} </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %} ">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %} ">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+  <link rel="stylesheet" href="{% static 'style.css' %} ">
+  <link rel="shortcut icon" href="{% static 'img/profile.png' %} " type="image/x-icon">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-light fixed-top bg-light shadow-sm">
+    <div class="container-lg">
+      <a class="navbar-brand text-danger fw-bold fs-4 text-uppercase" href="#">ErSoft Ltd.</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-danger px-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#home">{{request.user}}</a></li>
+          <li><a class="dropdown-item" href="#home">Home</a></li>
+          <li><a class="dropdown-item" href="#about">About</a></li>
+          <li><a class="dropdown-item" href="#services">Servises</a></li>
+          <li><a class="dropdown-item" href="#protfolio">Prortfolio</a></li>
+          <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+          <li><a class="dropdown-item" href="#contact">Contact</a></li>
+          <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  {% block body %}{% endblock body %}
+
+  <!--home section-->
+  <section class="home bg-white py-5" id="home">
+    <div class="container-lg">
+      <div class="row min vh-100 align-items-center align-content-centers">
+        <div class="col-md-6">
+          <div class="home-img text-center">
+          <img src="{% static 'img/profile.png' %}" class="rounded-circle mw-100" alt="profile img">
+          </div>
+        </div>
+        <div class="col-md-6 order-md-first">
+          <div class="home-text">
+          <p class="text-muted-mb-1">Hello I'm</p>
+          <h1 class="text-danger text-uppercase fs-1 fw-bold">Web & Mobile Application Developer</h1>
+          <h2 class="fs-4">Rubayet Hossain</h2>
+          <p class="mt-4 text-muted">I'm a web & mobile application developer. May i make a web site or moblie app and this is my skill. I know something what is HTML, CSS, JAVA, PYTHON, DJANGO, ANDROID STUDIO, BOOSTRAP and github.</p>
+          <a href="#protfolio" class="btn btn-danger px-3 mt-3">My Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--about section-->
+  <section class="about py-5" id="about">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">About Me</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-text">
+            <h3 class="fs-4 mb-3">Become a web & mobile application Developer</h3>
+            <p class="text-muted">I already learned the basic HTML, CSS, JAVA, PYTHON, DJANGO, ANDROID STUDIO, BOOSTRAP. I can build any simple website, mobile app. I can even teach others person how to make simple website, simple mobile app. My goal is to build 3 websites and learn advanced topics.</p>
+          </div>
+          <div class="row text-center text-uppercase">
+            <div class="col-sm-4">
+              <div class="fact-item">
+                <h4 class="fs-1 fw-bold">100</h4>
+                <p class="text-muted">Project Completed</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="fact-item">
+                <h4 class="fs-1 fw-bold">90</h4>
+                <p class="text-muted">Happy Clients</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="fact-item">
+                <h4 class="fs-1 fw-bold">95</h4>
+                <p class="text-muted">Positive Reviews</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 d-flex align-items-center">
+              <a href="#" class="btn px-3 btn-danger me-5">Download CV</a>
+              <div class="social-links">
+                <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-dark me-2"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- col-md- 1st end -->
+        <div class="col-md-6 mt-5 mt-md-0">
+          <div class="skill-item mb-4">
+            <h3 class="fs-6 inline">Html</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 25%;" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Css</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 75%;" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Javascript</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 50%;" aria-valuenow="50"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Bootstrap</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 90%;" aria-valuenow="90"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Python</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 70%;" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Django</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 10%;" aria-valuenow="10"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Android Development</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 60%;" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="skill-item mb-4">
+            <h3 class="fs-6">Java</h3>
+            <div class="progress" style="height: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" 
+                style="width: 30%;" aria-valuenow="30"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Services Section Here-->
+  <section class="services bg-white py-5" id="services">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">What I Do</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-light ">
+            <div class="icon my-3 text-danger fs-2">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="fs-5 py-2">Web Development</h3>
+            <p class="text-muted">I am the master of HTML, CSS and Javascript. I know everything needed to make a website function, efficient. I didn't stop with the web. I went beyond with most popular Javascript framework called Vue JS. I even know the deployment, server and security. I will give you 100% web solution</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-dark">
+            <div class="icon my-3 text-danger fs-2">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="fs-5 py-2 text-light">Creative Design</h3>
+            <p class="text-muted">2022-2024 | Programming Hero Learner
+              They didn't offer me a job. But I made myself as a remove web developer. I made their website and showed it to them. They liked it. And uploaded the content. It was fun working at Programming Hero</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-light">
+            <div class="icon my-3 text-danger fs-2">
+              <i class="fas fa-image"></i>
+            </div>
+            <h3 class="fs-5 py-2">Photoshop</h3>
+            <p class="text-muted">2022-2024 | Bongo Academy Learner
+              They didn't offer me a job. But I made myself as a remove Android developer. I made some mobile app and showed it to them. They liked it. And uploaded the content. It was fun working at Bongo Academy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!--Services Section end-->
+  <!-- protfolio start here -->
+  <section class="protfolio py-5" id="protfolio">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Latest Work</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/1.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">team section</h3>
+            <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/2.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">app landing page</h3>
+            <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/3.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">creative team section</h3>
+            <p class="mb-4"><a href="#testimonials" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/4.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">toggle pricing table</h3>
+            <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/5.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">bootsrap 5 image gallery</h3>
+            <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="protfolio-item shadow-sm p-4 rounded bg-white">
+            <img src="{% static 'img/portfolio/6.jpg' %}" class="w-100 img-thumbnail" alt="protfolio item">
+            <h3 class="fs-5 py-2 text-capitalize fs-5 my-2">filterable image gallery</h3>
+            <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- protfolio start end -->
+  <!-- frelancer section here -->
+  <section class="frelancer-available py-5 bg-danger">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p class="text-light fs-5">Do you have any project?</p>
+          <h2 class="fs-1 text-white mb-4">I'm Available For Freelancer Projects</h2>
+          <a href="#contact" class="btn btn-outline-light">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- frelancer section end -->
+  <!-- testimonial section -->
+  <section class="testimonials py-5" id="testimonials">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Testimonials</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-lg-8 col-xl-7">
+          <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carousel1" data-bs-slide-to="0" class="bg-danger"></li>
+              <li data-bs-target="#carousel1" data-bs-slide-to="1" class="active bg-danger" ></li>
+              <li data-bs-target="#carousel1" data-bs-slide-to="2" class="bg-danger"></li>
+            </ol>
+            <div class="carousel-inner p-1">
+              <!-- testi items start -->
+              <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+                <div class="testi-author-info d-flex align-items-center">
+                  <img src="{% static 'img/testimonial/1.jpg' %}" class="img-thumbnail rounded-circle" alt="author img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1">Jhon Smith</h3>
+                    <p class="text-muted m-0">Seo Manager</p>
+                  </div>
+                </div>
+                <p class="text-muted mt-0">Jhon Smith is our Seo Manager. He also work as a web developer with Django,</p>
+                <div class="rating text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i>
+                </div>
+              </div>
+              <!-- testi items end -->
+              <!-- testi items start -->
+              <div class="testi-item carousel-item active bg-white shadow-sm rounded p-4 mb-5">
+                <div class="testi-author-info d-flex align-items-center">
+                  <img src="{% static 'img/testimonial/my.jpg' %}" class="img-thumbnail rounded-circle" alt="author img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1">Rubayet Hossain</h3>
+                    <p class="text-muted m-0">Founder, Web & Mobile application Developer</p>
+                    <p class="text-muted fs-9 fw-9 m-0">at ErSoft Ltd.</p>
+                  </div>
+                </div>
+                <p class="text-muted mt-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used,</p>
+                <div class="rating text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <!-- testi items end -->
+              <!-- testi items start -->
+              <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+                <div class="testi-author-info d-flex align-items-center">
+                  <img src="{% static 'img/testimonial/3.jpg' %}" class="img-thumbnail rounded-circle" alt="author img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1">Raj Himachal</h3>
+                    <p class="text-muted m-0">Seo Manager</p>
+                  </div>
+                </div>
+                <p class="text-muted mt-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used,</p>
+                <div class="rating text-danger">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <!-- testi items end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tesitmonial end -->
+  <!-- contract section start-->
+<section class="contact bg-white py-5" id="contact">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Contact</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="contact-item d-flex mb-3">
+            <div class="icon fs-4 text-danger">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="text ms-3">
+              <h3 class="fs-5">Email</h3>
+              <p class="text-muted">rubayetblog@gamil.com</p>
+            </div>
+          </div>
+          <div class="contact-item d-flex mb-3">
+            <div class="icon fs-4 text-danger">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="text ms-3">
+              <h3 class="fs-5">Phone</h3>
+              <p class="text-muted">01705853737</p>
+            </div>
+          </div>
+          <div class="contact-item d-flex mb-3">
+            <div class="icon fs-4 text-danger">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="text ms-3">
+              <h3 class="fs-5">Visit</h3>
+              <p class="text-muted">9000 - Khulna,Khalishpur,Boikali</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="contact-form">
+            <form method="POST" action="/contact">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <input type="text" placeholder="Your Name" name="name" class="form-control form-control-lg fs-6 shadow-sm">
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <input type="email" placeholder="Your Email" name="email" class="form-control form-control-lg fs-6 shadow-sm">
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <input type="number" placeholder="Your Phone" name="phone" class="form-control form-control-lg fs-6 shadow-sm">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 mb-4">
+                  <input type="text" placeholder="Subject" name="sub" class="form-control form-control-lg fs-6 shadow-sm">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 mb-4">
+                  <textarea rows="5" placeholder="Your Message" name="desc" class="form-control form-control-lg fs-6 shadow-sm"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 mb-4">
+                  <button type="submit" class="btn btn-danger px-3">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- contact section end -->
+  <!-- Footer start -->
+  <section class="footer border-top py-4">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="m-0 text-center text-muted">&copy; 2021 All rights reserved by <a class=" link text-decoration-none text-dark "  href="#home">Rubayet Hossain</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- fotter end -->
+ <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
